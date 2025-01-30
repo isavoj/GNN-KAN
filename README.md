@@ -7,6 +7,21 @@ The domain is inerently a graph.
 3D shapes is another thing. 
 in accelerator physics, we deal with both 3D-shapes (if we discertize the domain) but also, teh particles themselves and their connections using graphs. (however, this owuld be very computaional inepxensive...)
 
+How do we take advanatge of this relational structure rto make more accuarte predictions.
+
+Todays deep-learning model tolbox are specialized ofr simple sequences and grids. amazing tools to develop to analyze ths simple structure. 
+Fixed size grids and fix sizd tesnors. 
+Graph  arre harder to process. arbitrary size and ocmpelx topology, there is no spatlia locailty ( text left and right, grid up and down eleft and right). graphs no notion of spatial locality. tehre is no fixed node ordering. Often these networks are dynamic and have multimodel fetaure.s 
+
+How do we develop neual networks that are much more broadly applicable.
+
+# input 
+Input will be grpahs. 
+A lot of effort goes into designing proper fetaures. so ML model can take adavnatge of it. 
+representation leanring, teh fetaure iegnieeirng step is taken away. Automaticlaly learnign feature in the graph (represetation leanring) 
+D dimensional embedidngs (vectors), 
+Map nodes in a grpah to a D-dimensional vector or embedding, such that similar nodes in the network are embedded close together
+
 
 
 # Dataset 
