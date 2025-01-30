@@ -22,6 +22,7 @@ representation leanring, teh fetaure iegnieeirng step is taken away. Automaticla
 D dimensional embedidngs (vectors), 
 Map nodes in a grpah to a D-dimensional vector or embedding, such that similar nodes in the network are embedded close together
 
+![easier](Figures/representation.PNG)
 
 
 # Dataset 
