@@ -1,3 +1,19 @@
+# Interpolation with KAN
+Consider a simple 2D linear element. With uniform \(N\) grids in both \(x\) and \(y\) directions, the FEM approximation is:
+
+$$
+u(x) = \sum_{i=1}^{2(N+1)} N_i(x) u_i
+$$
+
+where \(N_i(x)\) is the shape function:
+
+$$
+N_i(x) = N_x^i (x) \cdot N_y^i (y)
+$$
+
+Here, we can use the B_spline as a shape function. The coefficients would be the same as the nodal values on the grid. 
+
+
 # Calculate the Laplacian
 With b-splines, we can get the Laplacian immediately. 
 spline = BSpline(t, c, degree, extrapolate=False)
@@ -18,6 +34,8 @@ this is a direct consequence of:
 > ```
 
 where r is standing for the rth derivative of the vector of B-splines
+
+
 
 # Why graphs?
 gaphs are a generla language and anlaying entities with relationsa dn interaction. so rather than thinking of th world or a giving fomanin as a set of isolated datapoints,we think of it in terms of networks and relations between these entiities.
