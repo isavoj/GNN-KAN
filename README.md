@@ -8,16 +8,16 @@ We simply decide the size of the grid, and the order of the splines.
 The idea is that it's customizable and adaptable for the user. Hence, the user should be able to choose any kind of grid geometry and any kind of order.
 The d2basis will be equal to the weights in the following summation:
 > ```math
-> \psi''_k(x_i) = \sum_{j=1}^{N} W_{i,j}^{(2)} \psi_k(x_j), \quad \text{for } i = 1, 2, \dots, N; \, k = 1, 2, \dots, N
+> B_{d-r}(x_i) = \sum_{j=1}^{N} W_{i,j}^{(d)} B_d(x_j), \quad \text{for } i = 1, 2, \dots, N; \, d = 1, 2, \dots, N
 > ```
 
 this is a direct consequence of: 
 
-\[
-D^r B_d(x)^T =
-\frac{d!}{(d-r)!} B_{d-r}(x)^T D R_{d-r+1} \cdots D R_d.
-\]
+> ```math
+>D^r B_d(x)^T =\frac{d!}{(d-r)!} B_{d-r}(x)^T D R_{d-r+1} \cdots D R_d.
+> ```
 
+where r is standing for the rth derivative of the vector of B-splines
 
 # Why graphs?
 gaphs are a generla language and anlaying entities with relationsa dn interaction. so rather than thinking of th world or a giving fomanin as a set of isolated datapoints,we think of it in terms of networks and relations between these entiities.
