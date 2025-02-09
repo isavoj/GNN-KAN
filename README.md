@@ -1,3 +1,4 @@
+# Calculate the Laplacian
 With b-splines, we can get the Laplacian immediately. 
 spline = BSpline(t, c, degree, extrapolate=False)
 basis[:, i] = spline(x)
