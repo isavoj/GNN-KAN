@@ -1,16 +1,14 @@
+With b-splines, we can get the Laplacian immediately. 
+spline = BSpline(t, c, degree, extrapolate=False)
+basis[:, i] = spline(x)
+d2basis[:, i] = spline.derivative(2)(x). 
 
-Mathematically, the DQ approximation of the $`n`$-th order derivative with respect to $`x`$, $`u_x^{(n)}`$, and the $`m`$-th order derivative with respect to $`y`$, $`u_y^{(m)}`$, at $`(x_i, y_j)`$ can be written as:
-
-$`u_x^{(n)}(x_i, y_j) = \sum_{k=1}^{N} w_i^{(n)}(x_k, y_j) u(x_k, y_j)`$  
-$`u_y^{(m)}(x_i, y_j) = \sum_{k=1}^{M} w_j^{(m)}(x_i, y_k) u(x_i, y_k)`$  
-
-where $`N`$ and $`M`$ are, respectively, the number of mesh points in the $`x`$ and $`y`$ directions, $`w_i^{(n)}`$ and $`w_j^{(m)}`$ are the DQ weighting coefficients in the $`x`$ and $`y`$ directions.
-For second derivative n = m = 2 we combine the derivative matrices in both directions using the Kronecker product to form the Laplacian matrix:
-
-```math
-\nabla^2 = I_y \otimes u_x^2 + u_y^2 \otimes I_x
- ```
-where \(I\) is the identity matrix and $`\otimes`$  denotes the Kronecker product.
+We simply decide the size of the grid, and the order of the splines. 
+The idea is that it's customizable and adaptable for the user. Hence, the user should be able to choose any kind of grid geometry and any kind of order.
+The d2basis will be equal to the weights in the following summation:
+> ```math
+> \psi''_k(x_i) = \sum_{j=1}^{N} W_{i,j}^{(2)} \psi_k(x_j), \quad \text{for } i = 1, 2, \dots, N; \, k = 1, 2, \dots, N
+> ```
 
 # Why graphs?
 gaphs are a generla language and anlaying entities with relationsa dn interaction. so rather than thinking of th world or a giving fomanin as a set of isolated datapoints,we think of it in terms of networks and relations between these entiities.
