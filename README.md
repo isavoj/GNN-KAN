@@ -11,6 +11,14 @@ The d2basis will be equal to the weights in the following summation:
 > \psi''_k(x_i) = \sum_{j=1}^{N} W_{i,j}^{(2)} \psi_k(x_j), \quad \text{for } i = 1, 2, \dots, N; \, k = 1, 2, \dots, N
 > ```
 
+this is a direct consequence of: 
+
+\[
+D^r B_d(x)^T =
+\frac{d!}{(d-r)!} B_{d-r}(x)^T D R_{d-r+1} \cdots D R_d.
+\]
+
+
 # Why graphs?
 gaphs are a generla language and anlaying entities with relationsa dn interaction. so rather than thinking of th world or a giving fomanin as a set of isolated datapoints,we think of it in terms of networks and relations between these entiities.
 This means that we have an undelrying grpah of relations between entities
